@@ -69,7 +69,9 @@ class AdobeMcp < Formula
         refute_nil line, "#{server} produced no output"
         response = JSON.parse(line)
         assert_equal 1, response["id"]
-        assert response["result"].key?("serverInfo"), "#{server}: #{line}"
+        server_info = response.dig("result", "serverInfo")
+        refute_nil server_info, "#{server}: #{line}"
+        assert_equal version.to_s, server_info["version"] if server == "adobe-mcp-suite"
       ensure
         stdin.close unless stdin.closed?
         begin
