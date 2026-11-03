@@ -16,8 +16,8 @@ brew trust zachshallbetter/tap   # Homebrew 7+ asks you to trust third-party tap
 # Adobe InDesign, Illustrator, Photoshop, Premiere Pro, After Effects
 brew install zachshallbetter/tap/adobe-mcp
 
-# Blender (no tagged release yet, so build from the main branch)
-brew install --HEAD zachshallbetter/tap/blender-mcp
+# Blender
+brew install zachshallbetter/tap/blender-mcp
 ```
 
 ## What each formula installs
@@ -82,7 +82,7 @@ prints a ready-made snippet.
 ```sh
 brew update
 brew upgrade zachshallbetter/tap/adobe-mcp
-brew upgrade --fetch-HEAD zachshallbetter/tap/blender-mcp   # HEAD builds only update with --fetch-HEAD
+brew upgrade zachshallbetter/tap/blender-mcp   # add --HEAD at install time to track main instead
 ```
 
 ## Uninstall
