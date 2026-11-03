@@ -1,7 +1,10 @@
 # zachshallbetter/tap
 
-Homebrew formulae for [Creative MCP](https://github.com/zachshallbetter): Model Context Protocol
+Homebrew formulae for [Creative MCP](https://creativemcp.com): Model Context Protocol
 servers that let AI assistants drive Adobe creative apps and Blender on your Mac.
+
+Created and maintained by [Zach Shallbetter](https://zachshallbetter.com/) ·
+[creativemcp.com](https://creativemcp.com) · [Docs](https://creativemcp.com/docs/)
 
 ## Install
 
@@ -94,3 +97,9 @@ Uninstalling does not remove the Blender add-on or entries you added to MCP clie
 ## Licenses
 
 `adobe-mcp`: MIT. `blender-mcp`: MIT OR Apache-2.0.
+
+## Author
+
+Creative MCP, Adobe MCP and Blender MCP are created by [Zach Shallbetter](https://zachshallbetter.com/)
+([GitHub](https://github.com/zachshallbetter) · [LinkedIn](https://linkedin.com/in/zachshallbetter)).
+Learn more at [creativemcp.com/about](https://creativemcp.com/about.html).

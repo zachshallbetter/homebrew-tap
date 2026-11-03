@@ -1,6 +1,6 @@
 class AdobeMcp < Formula
   desc "MCP servers for Adobe InDesign, Illustrator, Photoshop, Premiere, After Effects"
-  homepage "https://github.com/zachshallbetter/adobe-mcp"
+  homepage "https://creativemcp.com/apps.html"
   url "https://registry.npmjs.org/adobe-mcp-suite/-/adobe-mcp-suite-0.3.0.tgz"
   sha256 "ef74a2a5d073f3411a715d7b73d9c3e1fb3e801bd7e9fb6a3752ff54f8906e03"
   license "MIT"

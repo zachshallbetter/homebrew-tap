@@ -1,6 +1,6 @@
 class BlenderMcp < Formula
   desc "Rust-native Model Context Protocol server and spatial agent engine for Blender"
-  homepage "https://github.com/zachshallbetter/blender-mcp-rs"
+  homepage "https://creativemcp.com/docs/implementations/blender.html"
   license any_of: ["MIT", "Apache-2.0"]
 
   # No release has been tagged yet, so this formula is HEAD-only for now:
