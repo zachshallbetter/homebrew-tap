@@ -7,6 +7,7 @@ servers that let AI assistants drive Adobe creative apps and Blender on your Mac
 
 ```sh
 brew tap zachshallbetter/tap
+brew trust zachshallbetter/tap   # Homebrew 7+ asks you to trust third-party taps
 
 # Adobe InDesign, Illustrator, Photoshop, Premiere Pro, After Effects
 brew install zachshallbetter/tap/adobe-mcp

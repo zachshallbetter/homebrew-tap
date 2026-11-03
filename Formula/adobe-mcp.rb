@@ -7,6 +7,8 @@ class AdobeMcp < Formula
 
   depends_on "node"
 
+  conflicts_with "zachshallbetter/adobe-mcp/adobe-mcp-suite", because: "both install `adobe-mcp-suite`"
+
   # Executables shipped by the suite's per-application dependencies.
   APP_BINS = %w[
     adobe-mcp-indesign
