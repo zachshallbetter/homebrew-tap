@@ -4,7 +4,8 @@ Homebrew formulae for [Creative MCP](https://creativemcp.com): Model Context Pro
 servers that let AI assistants drive Adobe creative apps and Blender on your Mac.
 
 Created and maintained by [Zach Shallbetter](https://zachshallbetter.com/) ·
-[creativemcp.com](https://creativemcp.com) · [Docs](https://creativemcp.com/docs/)
+[creativemcp.com](https://creativemcp.com) · [Docs](https://creativemcp.com/docs/) ·
+[Series repo and catalogue](https://github.com/zachshallbetter/creative-mcp)
 
 ## Install
 
