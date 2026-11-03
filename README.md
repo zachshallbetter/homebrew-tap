@@ -13,6 +13,11 @@ Created and maintained by [Zach Shallbetter](https://zachshallbetter.com/) ·
 brew tap zachshallbetter/tap
 brew trust zachshallbetter/tap   # Homebrew 7+ asks you to trust third-party taps
 
+# Everything that matches your apps: detects them, then installs, registers and verifies
+brew install zachshallbetter/tap/creative-mcp
+creative-mcp setup
+
+# Or pick tools yourself:
 # Adobe InDesign, Illustrator, Photoshop, Premiere Pro, After Effects
 brew install zachshallbetter/tap/adobe-mcp
 
@@ -21,6 +26,10 @@ brew install zachshallbetter/tap/blender-mcp
 ```
 
 ## What each formula installs
+
+### `creative-mcp`
+
+The series installer ([source](https://github.com/zachshallbetter/creative-mcp/tree/main/cli)). `creative-mcp setup` detects your creative apps and MCP clients, shows the plan, installs the matching formulae below, registers their servers with your clients and checks each answers MCP `initialize`. Also `detect`, `list`, `doctor` and `--dry-run`.
 
 ### `adobe-mcp`
 
