@@ -1,8 +1,8 @@
 class CreativeMcp < Formula
   desc "Detects creative apps and MCP clients, then installs Creative MCP servers"
   homepage "https://creativemcp.com/docs/architecture.html#installer"
-  url "https://github.com/zachshallbetter/creative-mcp/archive/refs/tags/cli-v0.2.2.tar.gz"
-  sha256 "79e08bc7703881b006228dad0515103a35275ac95f57d2a683752480438ec652"
+  url "https://github.com/zachshallbetter/creative-mcp/archive/refs/tags/cli-v0.2.3.tar.gz"
+  sha256 "13419bc8102f113abbb5e7e1ee0d3d65beeb738f0ead90236b6fa2f713a90b9e"
   license "MIT"
   head "https://github.com/zachshallbetter/creative-mcp.git", branch: "main"
 
