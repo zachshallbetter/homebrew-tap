@@ -29,7 +29,7 @@ brew install zachshallbetter/tap/blender-mcp
 
 ### `creative-mcp`
 
-The series installer ([source](https://github.com/zachshallbetter/creative-mcp/tree/main/cli)). `creative-mcp setup` detects your creative apps and MCP clients, shows the plan, installs the matching formulae below, registers their servers with your clients and checks each answers MCP `initialize`. Also `detect`, `list`, `doctor` and `--dry-run`.
+The series installer ([source](https://github.com/zachshallbetter/creative-mcp/tree/main/cli)). `creative-mcp setup` detects your creative apps and MCP clients, shows the plan, installs the matching formulae below, registers their servers with your clients and checks each answers MCP `initialize`. It only registers what is missing, so it is safe to run again. For everyday use: `creative-mcp doctor` (servers, running apps and client registrations, with a fix for each problem), `creative-mcp update`, `creative-mcp add <tool>` and `creative-mcp remove <tool>`. Every command takes `--dry-run`.
 
 ### `adobe-mcp`
 
@@ -55,19 +55,19 @@ Builds the `blender-mcp` CLI from [zachshallbetter/blender-mcp-rs](https://githu
 with Cargo. It needs Blender 4.0 or newer plus its companion add-on, which the CLI installs:
 
 ```sh
-blender-mcp addon install   # copy the add-on into every detected Blender version
+blender-mcp addon install   # install and turn on the add-on for every Blender version (quit Blender first)
 blender-mcp addon status    # check which Blender versions have it
 ```
 
-Then enable **Blender MCP** in Blender > Preferences > Add-ons.
+Nothing to enable by hand: the add-on starts with Blender and listens on 127.0.0.1:9876.
 
 ## Register with an MCP client
 
 Claude Code:
 
 ```sh
-claude mcp add adobe-suite -- adobe-mcp-suite
-claude mcp add indesign    -- adobe-mcp-indesign
+claude mcp add --scope user adobe-suite -- adobe-mcp-suite
+claude mcp add --scope user indesign    -- adobe-mcp-indesign
 blender-mcp client add claude-code      # also: cursor, codex, gemini, antigravity
 ```
 
@@ -89,6 +89,12 @@ prints a ready-made snippet.
 ## Update
 
 ```sh
+creative-mcp update     # brew update, upgrade every installed tool and creative-mcp, refresh registrations
+```
+
+Or by hand:
+
+```sh
 brew update
 brew upgrade zachshallbetter/tap/adobe-mcp
 brew upgrade zachshallbetter/tap/blender-mcp   # add --HEAD at install time to track main instead
@@ -97,16 +103,22 @@ brew upgrade zachshallbetter/tap/blender-mcp   # add --HEAD at install time to t
 ## Uninstall
 
 ```sh
+creative-mcp remove adobe blender   # removes their servers from every MCP client, then uninstalls them
+```
+
+Or by hand:
+
+```sh
 blender-mcp addon status                 # note add-on paths if you want to remove them too
 brew uninstall adobe-mcp blender-mcp
 brew untap zachshallbetter/tap
 ```
 
-Uninstalling does not remove the Blender add-on or entries you added to MCP client configs.
+Uninstalling by hand does not remove the Blender add-on or the entries in your MCP client configs; `creative-mcp remove` takes care of the client entries.
 
 ## Licenses
 
-`adobe-mcp`: MIT. `blender-mcp`: MIT OR Apache-2.0.
+`creative-mcp`: MIT. `adobe-mcp`: MIT. `blender-mcp`: MIT OR Apache-2.0.
 
 ## Author
 
