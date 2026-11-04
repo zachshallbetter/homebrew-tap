@@ -1,8 +1,8 @@
 class BlenderMcp < Formula
   desc "Rust-native Model Context Protocol server and spatial agent engine for Blender"
   homepage "https://creativemcp.com/docs/implementations/blender.html"
-  url "https://github.com/zachshallbetter/blender-mcp-rs/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "31775853b32c7358c9f2f32bf503331b4457b245fbc5939f428353eae3ad0ba4"
+  url "https://github.com/zachshallbetter/blender-mcp-rs/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "6cc19c3c20d8e1023687d84041d39430fea0d0126bb370de1abf19cb0bccfef8"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/zachshallbetter/blender-mcp-rs.git", branch: "main"
 
@@ -17,9 +17,8 @@ class BlenderMcp < Formula
       blender-mcp needs Blender 4.0 or newer and its companion add-on, which the
       server talks to over a local socket (127.0.0.1:9876 by default).
 
-      Install the add-on into every detected Blender version:
+      Install and turn on the add-on for every Blender version (quit Blender first):
         blender-mcp addon install
-      then enable "Blender MCP" in Blender > Preferences > Add-ons.
 
       Register the server with your MCP client, e.g.:
         blender-mcp client add claude-code
