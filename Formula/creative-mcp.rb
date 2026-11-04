@@ -1,8 +1,8 @@
 class CreativeMcp < Formula
   desc "Detects creative apps and MCP clients, then installs Creative MCP servers"
   homepage "https://creativemcp.com/docs/architecture.html#installer"
-  url "https://github.com/zachshallbetter/creative-mcp/archive/refs/tags/cli-v0.1.0.tar.gz"
-  sha256 "6a8d18a454da04205b43ef8b94675146044ef8bd3e8f604ba34e9d241a7e7a7f"
+  url "https://github.com/zachshallbetter/creative-mcp/archive/refs/tags/cli-v0.2.0.tar.gz"
+  sha256 "270412e286512f8746095e069b1ed64ba336d306e27e4b654bddb8ec41597e51"
   license "MIT"
   head "https://github.com/zachshallbetter/creative-mcp.git", branch: "main"
 
@@ -19,6 +19,8 @@ class CreativeMcp < Formula
 
       It shows every command and config change before making it. Preview without changes:
         creative-mcp setup --dry-run
+
+      Afterwards: creative-mcp doctor checks everything, creative-mcp update keeps it current.
     EOS
   end
 
@@ -29,5 +31,6 @@ class CreativeMcp < Formula
     assert_includes ids, "adobe"
     assert_includes ids, "blender"
     assert_match "Detect apps and MCP clients", shell_output("#{bin}/creative-mcp help")
+    assert_match "creative-mcp remove", shell_output("#{bin}/creative-mcp remove 2>&1", 2)
   end
 end
