@@ -120,6 +120,8 @@ Uninstalling by hand does not remove the Blender add-on or the entries in your M
 
 `creative-mcp`: MIT. `adobe-mcp`: MIT. `blender-mcp`: MIT OR Apache-2.0.
 
+The tap's own formulas are MIT (see [LICENSE](LICENSE)).
+
 ## Author
 
 Creative MCP, Adobe MCP and Blender MCP are created by [Zach Shallbetter](https://zachshallbetter.com/)
